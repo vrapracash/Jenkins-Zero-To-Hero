@@ -13,7 +13,7 @@ pipeline {
         sh 'kubectl apply -f deployment.yml'
       }
     }
-  stage('Test') {
+  stage('Results') {
       steps {
         sh 'node --version'
       }
