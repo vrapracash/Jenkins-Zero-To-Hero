@@ -10,7 +10,7 @@ pipeline {
     }
   stage('Deploy') {
       steps {
-        sh 'java --version'
+        sh 'docker run Hello-World'
       }
     }
   stage('Results') {
