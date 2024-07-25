@@ -10,12 +10,12 @@ pipeline {
     }
   stage('Deploy') {
       steps {
-        sh 'kubectl apply -f deployment.yml'
+        sh 'java -version'
       }
     }
   stage('Results') {
       steps {
-        sh 'node --version'
+        sh 'docker run Hello-World'
       }
     }
   }
