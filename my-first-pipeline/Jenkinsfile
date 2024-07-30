@@ -18,9 +18,10 @@ pipeline {
         sh 'node --version'
       }
     }
-  }
-}
 post {
+  always { 
+    sh 'echo "Cleaning up..."'
+  }
    sucess {
       mail to: 'veera.bangla@gmail.com',
         subject: 'Pipeline Succeeded',
@@ -31,5 +32,6 @@ post {
         subject: 'Pipeline Failed',
         body: 'Your Jenkins pipe line has failed, Please investigate.'
     }
-   }
-
+  }
+}
+}
