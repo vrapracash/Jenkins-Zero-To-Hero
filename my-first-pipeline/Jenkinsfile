@@ -27,5 +27,6 @@ pipeline {
       mail to: 'veera.bangla@gmail.com',
         subject: 'Pipeline Failed',
         body: 'Your Jenkins pipe line has failed, Please investigate.'
+    }
   }
 }
