@@ -23,7 +23,7 @@ post {
   always { 
     sh 'echo "Cleaning up..."'
   }
-   sucess {
+   success {
       mail to: 'veera.bangla@gmail.com',
         subject: 'Pipeline Succeeded',
         body: 'Your Jenkins pipe line is completed successfully.'
