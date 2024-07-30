@@ -18,5 +18,14 @@ pipeline {
         sh 'node --version'
       }
     }
+    success{
+      mail to: 'veera.bangla@gmail.com',
+        subject: 'Pipeline Succeeded',
+        body: 'Your Jenkins pipe line is completed successfully.'
+    }
+    failure{
+      mail to: 'veera.bangla@gmail.com',
+        subject: 'Pipeline Failed',
+        body: 'Your Jenkins pipe line has failed, Please investigate.'
   }
 }
