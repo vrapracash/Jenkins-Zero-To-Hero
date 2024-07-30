@@ -18,8 +18,8 @@ pipeline {
         sh 'node --version'
       }
     }
-  stage('Email Notification') {
-     success {
+  post {
+     sucess {
         mail to: 'veera.bangla@gmail.com',
           subject: 'Pipeline Succeeded',
           body: 'Your Jenkins pipe line is completed successfully.'
